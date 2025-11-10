@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Student Records System</title>
+  <link rel="stylesheet" href="group.css" />
+</head>
+<body>
+
+
+  
+  <main class="container">
+<header class="page-header">
+    <h1>StudentSync⚡</h1>
+  <h3>Student Information System</h3>
+</header>
+
+    <section class="form-section">
+      <h2 id="form-title">Add Student</h2>
+      <form id="student-form" autocomplete="off">
+        <div class="row">
+          <label>Full Name
+            <input id="fullName" name="fullName" placeholder="Enter full name" required />
+          </label>
+          <label>Student ID
+            <input id="studentId" name="studentId" placeholder="e.g. 2025-001" required />
+          </label>
+        </div>
+
+        <div class="row">
+          <label>Course
+            <input id="course" name="course" placeholder="e.g. BSIT, BSCS, BSEMC" required />
+          </label>
+          <label>Year Level
+            <select id="yearLevel" name="yearLevel" required>
+              <option value="">Select year</option>
+              <option>1st Year</option>
+              <option>2nd Year</option>
+              <option>3rd Year</option>
+              <option>4th Year</option>
+            </select>
+          </label>
+        </div>
+
+        <label>Email Address
+          <input id="email" name="email" type="email" placeholder="student@email.com" required />
+        </label>
+
+        <div class="form-actions">
+          <button id="submit-btn" type="submit">Add Student</button>
+          <button id="cancel-edit" type="button" class="hidden">Cancel Edit</button>
+        </div>
+      </form>
+    </section>
+
+    <section class="controls">
+      <input id="search" placeholder="Search by ID, Course, or Year..." />
+      <div class="sorts">
+        <button id="sortById">Sort by ID ↑</button>
+        <button id="sortByName">Sort by Name ↑</button>
+      </div>
+    </section>
+
+    <section class="table-section">
+      <table id="students-table" aria-live="polite">
+        <thead>
+          <tr>
+            <th>Student ID</th>
+            <th>Full Name</th>
+            <th>Course</th>
+            <th>Year</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="students-tbody">
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      <p><strong>Course:</strong> ITPC 115 – Integrative Programming and Technologies</p>
+  <p><strong>Developed by:</strong> REMEDILLO, WATIWAT, ALAVE, </p>
+    </footer>
+  </main>
+
+  <script src="group.js"></script>
+</body>
+</html>
